@@ -1,0 +1,392 @@
+%Change fontsize personality
+%\documentclass[paper=a4, fontsize=12pt]{scrartcl}
+
+%Fuente 12pt
+\documentclass[11pt]{article}
+%Fuente Times New Roman 
+\usepackage{mathptmx}
+%\usepackage{newtxtext,newtxmath}
+
+%Graficos
+\usepackage{graphicx}
+\usepackage{float}
+%Margenes
+\usepackage[a4paper,left=30mm,right=25mm,top=25mm, bottom=25mm]{geometry}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue]{hyperref}%
+%Encabezados y pie de pagina
+\usepackage{fancyhdr}
+\RequirePackage{xcolor}
+\usepackage{xcolor}
+\newcommand{\cfootnote}[2][black]{%
+    {\color{#1}\footnote{#2}}%
+}
+
+
+\usepackage{setspace}	
+%\singlespacing \doublespacing \onehalfspacing
+
+\usepackage{mdframed}%%Marco Caratula
+
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+%lorem ipsum
+\usepackage{lipsum}
+\usepackage{tabto}
+%URLS
+\usepackage{hyperref}
+
+\renewcommand\thesection{\Roman{section}}
+%%%%%%%%
+%Personaliza Sections
+	%%\newcommand{\mysection}[2]{\setcounter{section}{#1}\addtocounter{section}{-1}\section{#1: #2}}
+	%%\mysection{8}{Diseño de una Base de Datos}
+%%%%%%%%
+
+
+\begin{document}
+	\begin{mdframed}
+		\doublespacing
+		\begin{center}
+			\vspace{5mm}
+			\begin{Large}
+				UNIVERSIDAD NACIONAL DE SAN AGUSTÍN DE AREQUIPA\\
+			\end{Large}
+				
+			\begin{large}
+				FACULTAD DE INGENIERIA DE PRODUCCIÓN Y SERVICIOS\\
+			\end{large}
+			\begin{normalsize}
+				ESCUELA PROFESIONAL DE INGENIERIA DE SISTEMAS\\
+			\end{normalsize}
+			
+			\vspace{14mm}
+			\includegraphics[width=4.3cm, height=5.5cm]{logoUNSA}
+			\vspace{14mm}
+		\end{center}
+		\onehalfspacing	
+		\begin{flushleft}
+			\begin{large}
+				Curso\tab:\textbf{Interaccion Humano Computador}\\
+			\end{large}
+			\vspace{5mm}
+			\begin{normalsize}
+				Docente\tab:\textbf{Dr. Ing. Richart Escobedo Quispe}\\
+				
+			\end{normalsize}
+		\end{flushleft}
+		\doublespacing		
+		\begin{center}
+			\begin{large}
+				\textbf{Informe de Investigación Formativa de \\Interaccion Humano Computador: Usabilidad}
+			\end{large}
+		\end{center}
+		\singlespacing
+		\begin{flushleft}
+			\begin{normalsize}
+				Elaborado por :\qquad Frank Leny Ccapa Usca\\
+				\hspace{31.5mm}Quenta Nina, Patrik Renee\\
+				\hspace{31.5mm}Alfred Marvin Casanova Vargaya\\
+				\hspace{31.5mm}Yonathan Smith Ylaccaña Cordova\\
+				
+				\vspace{10mm}
+			
+			\end{normalsize}
+		\end{flushleft}
+		\vspace{15mm}
+		\begin{center}
+			08 de Agosto de 2020
+		\end{center}
+		
+	\end{mdframed}
+	
+	\newpage
+	\tableofcontents
+	
+	\newpage
+	\singlespacing
+	\begin{normalsize}
+		\begin{flushleft}
+	\section{Usabilidad}
+        \begin{itemize}
+           
+            La Usabilidad es la medida de la calidad de la experiencia que tiene un usuario cuando interactúa con un producto o sistema. Esto se mide a través del estudio de la relación que se produce entre las herramientas (entendidas en un Sitio Web el conjunto integrado por el sistema de navegación, las funcionalidades y los contenidos ofrecidos) y quienes las utilizan, para determinar la eficiencia en el uso de los diferentes elementos ofrecidos en las pantallas y la efectividad en el cumplimiento de las tareas que se pueden llevar a cabo a través de ellas.
+
+        \end{itemize}
+		
+	\section{Evaluacion de la usabilidad}
+	    \begin{itemize}
+           
+            Evaluar consiste en probar algo. Tanto para saber si funciona correctamente como no, si cumple con las expectativas o no, o simplemente para conocer cómo funciona una determinada herramienta o utensilio.
+            Se puede decir de la Evaluación como: La actividad comprende un conjunto de metodologías y técnicas que analizan la usabilidad y/o la accesibilidad de un sistema interactivo en diferentes etapas del ciclo de vida del software.
+            La evaluación es una parte básica de un diseño de un sistema centrado en el usuario. Permite conocer el grado de cumplimiento de las expectativas de los usuarios de un determinado sistema interactivo, así como si éste se adapta a su contexto social, físico y organizativo
+
+        \end{itemize}
+	
+	
+	\section{Modelos Históricos de Evaluación }
+	\subsection{Modelo Antiguo }
+        \subsubsection{Modelo Easen}
+            \begin{itemize}La lección del modelo de Eason es que no se puede medir la usabilidad sin considerar usuarios y sus tareas objetivo. Estas características ambientales proporcionan información contextual esencial y pueden influir en la usabilidad tanto como en las características de la propia interfaz de usuario. Ahora veamos los tcs específicos del modelo Eason.
+            \end{itemize}
+            
+            \begin{itemize}
+                \item \textbf{Caracteristicas del Sistema}
+                    \begin{itemize}
+                        El primer conjunto de dimensiones son las características de la propia interfaz.
+                        Eason indica que la facilidad del uso, la facilidad de aprendizaje y la coincidencia de tareas de la interfaz son determinantes importantes de la usabilidad.
+                        En este marco:
+                    \end{itemize}
+                    
+                    \begin{itemize}
+                    \begin{enumerate}
+                        \item La facilidad de aprendizaje significa el esfuerzo requerido para comprender y operar un sistema desconocido.
+                        
+                        \item Facilidad de uso significa el esfuerzo que se requiere para operar un sistema una vez que ha sido entendido y dominado por el usuario. Estas nociones son diferentes. Por ejemplo, un sistema que es fácil de aprender, a través de un diálogo que guía al usuario a través de las tareas, puede ser difícil de usar porque el diálogo está en el camino.                  
+                        
+                        \item Coincidencia de tareas significa la medida en que la información y las funciones que proporciona un sistema coinciden con las necesidades del usuario para la tarea determinada. Considere esto: si tengo una tarea deficiente, el dispositivo no se puede utilizar independientemente de la calidad de la interfaz de usuario. Por ejemplo, los sistemas de juegos pueden tener interfaces maravillosas, pero si deseo usar la interfaz para el procesamiento de texto, entonces el sistema no se ajusta bien a mis necesidades. Probablemente no pueda utilizar el sistema debido a una mala coincidencia de tareas. Las interfaces de usuario que apoyan las tareas del usuario, pero que lo hacen de formas oscuras o impredecibles, también pueden tener una coincidencia de tareas deficiente y, en consecuencia, tendrán un resultado de usabilidad negativo.
+                        
+                    
+                    \end{enumerate}
+                    \end{itemize}
+                    
+                    \begin{itemize}
+                          Eason (1984) señala que las variables del sistema (interfaz de usuario) a menudo son las más fáciles de medir y ciertamente las más fáciles de cambiar. Como veremos, las variables de la tarea y el usuario suelen ser el escenario o contexto de nuestro trabajo. Como tal, intentaremos trabajar dentro de estas variables, sin intentar cambiarlas.
+                    \end{itemize}
+                  
+                \item \textbf{Caracteristicas de la Tarea}
+                    \begin{itemize}
+                        ¿Qué quiere decir Eason con tarea? La tarea es lo que haces con el dispositivo y puede ser más o menos independiente del sistema específico. Suponga que el sistema es una escoba. Las tareas que uno puede hacer con una escoba incluyen barrer el piso, derribar telarañas, ahuyentar ratones y volar. Eason especifica dos características de la tarea en su marco:
+                    \end{itemize}
+                    
+                    \begin{itemize}
+                    \begin{enumerate}
+                        \item Frecuencia significa la cantidad de veces que un usuario realiza una tarea.
+                        \break
+                        \item La apertura se refiere a la cantidad de opciones que ofrece una interfaz para una tarea. Específicamente, afirma Eason (1984, 138): "Si la tarea es abierta, las opciones pueden tener que ser mucho mayores". En otras palabras, ¿la tarea es extremadamente mecánica o flexible?
+                        Considere el sistema de escoba y la tarea de barrer el piso. Muchos de nosotros barremos el piso a diario, lo que hace que barrer sea una tarea que se realiza con frecuencia en las tareas del hogar. En cuanto a la apertura, la tarea no es particularmente modificable y por lo tanto no es muy abierta.
+
+                    \end{enumerate}
+                    \end{itemize}
+                \item \textbf{Caracteristicas de los Usuarios}
+                    \begin{itemize}
+                        Los usuarios aportan muchas características a la imagen cuando utilizan una interfaz. Eason ha identificado tres de estas características que parecen tener una gran influencia en la usabilidad. 
+                    \end{itemize}
+                    
+                    \begin{itemize}
+                    \begin{enumerate}
+                        \item Su primera característica de usuario es el conocimiento. Esto significa el conocimiento que el usuario aplica a la tarea. El conocimiento puede ser apropiado o inapropiado. Por ejemplo, las habilidades y experiencias que ha acumulado para aprender a conducir un automóvil pueden no ser transferibles cuando aprende a pilotar un bote.
+                        \break
+                        \item Una segunda característica del usuario es la motivación: si los usuarios tienen un alto grado de motivación, es probable que dediquen más energía a superar problemas y malentendidos con el sistema. En un curso de ingeniería de usabilidad, puede utilizar una herramienta de creación de prototipos para crear una interfaz de usuario. Algunos estudiantes comieron más motivados para obtener una A que otros compañeros de clase y pasarán más tiempo aprendiendo a usar la herramienta de creación de prototipos. 
+                        \break
+                        \item Una característica final del usuario es la discreción. La discreción se refiere a la capacidad del usuario de elegir usar (o no usar) alguna parte del sistema en cuestión. Un ejemplo sería el uso de muchas funciones en un paquete de procesamiento de texto popular. Puedo tomarme el tiempo para aprender a definir mis propios estilos de formato, o puedo usar otras herramientas en el paquete que me darán el mismo resultado.
+
+                    \end{enumerate}    
+                    \end{itemize}
+                
+            \end{itemize}
+	\subsection{Modelo modernos}
+		\subsubsection{Modelo de Shackel}
+		\begin{itemize} 
+		    Según Shackel, usabilidad es una característica de un sistema o de un pedazo de equipo. La característica no es constante, siendo relativa en referente a usuarios, a su entrenamiento y ayuda, a las tareas y a los ambientes. Así, la evaluación es dependiente del contexto. El sistema o el pedazo de equipo puede ser funcional si empareja la combinación de usuarios, de tareas y del ambiente. La Usabilidad tiene dos lados, uno relacionado con la percepción subjetiva del producto y el otro con las medidas objetivas de la interacción. Los instrumentos, las escalas o los aspectos necesarios para aislar estos no son explicados por la definición. Shackel reconoce la ambigüedad de la definición y sugiere unos criterios operacionales. Para que un sistema sea usable él tiene que alcanzar niveles definidos en las escalas siguientes:
+		\end{itemize}
+		\begin{itemize}
+		    \begin{enumerate}
+		    
+		        \item eficacia, significando los resultados de la interacción en términos de la celeridad y de los errore;
+		        \break
+		        \item aprendizaje, significando la relación del funcionamiento al entrenamiento y a la frecuencia del uso, es decir el tiempo del aprender por usuario principiante con entrenamiento especificado, y la retención de parte del usuario acostumbrado.
+		        \break
+		        \item flexibilidad, la adaptación a las tareas y a los ambientes otros que esos primero especificados;
+		        \break
+		        \item y actitud, significando los "niveles aceptables de costes humanos en términos del cansancio, la molestia, la frustración y el esfuerzo personal".
+
+		    \end{enumerate}
+		\end{itemize}
+	    \subsubsection{Modelo de Nielsen}
+	    \begin{itemize}
+	        La usabilidad es un concepto que trata con los problemas de cómo los usuarios utilizan estas funciones. El provecho junto con otras cualidades de producto percibidas como coste, confiabilidad, etc. se llama aceptabilidad práctica en el modelo de la aceptación, de Nielsen. Para alcanzar la aceptabilidad del sistema, Nielsen agrega la influencia de la aceptabilidad social. Las consideraciones prácticas de un producto cubren solamente una perspectiva en la evaluación del producto de consumo. El reconocimiento de influencias sociales en la aceptación del producto es esencial en la determinación de la importancia de las cualidades del producto.
+            Nielsen no presenta ninguna definición descriptiva de la usabilidad, pero considera criterios operacionales para definir el concepto.
+
+	    \end{itemize}
+	    \begin{itemize}
+	        \begin{enumerate}
+	            \item Aprendizaje refiere a la capacidad de los principiantes de alcanzar un nivel razonable de funcionamiento rápidamente. Nielsen considera la learnability como un criterio fundamental, porque todos los sistemas con pocas excepciones tienen que ser aprendidos para el uso eficiente. La eficacia se refiere al nivel de usuario experto del funcionamiento, que es medido típicamente por la celeridad del funcionamiento.
+
+	            \break
+	            \item Los errores se refieren al número de errores que los usuarios hacen, a su capacidad de recuperarse de errores, y a la existencia de los errores catastróficos, que destruyen el trabajo del usuario.
+	            \break
+	            \item La satisfacción refiere a la evaluación subjetiva de los usuarios del sistema referente cómo es agradable es utilizar. Como una subdimensión de la satisfacción Nielsen menciona la "facilidad de familiarizarse" (approachability), que mide cómo usable los sujetos consideran un sistema estar antes de uso real. Nielsen no cuenta con una alta correlación entre la facilidad de familiarizarse y la usabilidad. Los cuestionarios se introducen como la manera más obvia de medir la satisfacción. Sin embargo, la cantidad de uso voluntario se sugiere como "la última medida subjetiva de la satisfacción."
+                \break
+	            \item Retención refiere a la capacidad del usuario ocasional de recordar cómo utilizar un sistema después de un período de tiempo.
+
+	        \end{enumerate}
+	    \end{itemize}
+		
+		
+    \subsection{Modelos formales}
+        \subsubsection{Usabilidad según la normatividad ISO 9241-11}
+        \begin{itemize}
+            La norma ISO 9241-11 (Ergonomic requirements for office work with visual display terminals -VDTs), determina cómo medir la usabilidad de productos y aquellos factores que tengan algún efecto dentro del mismo. 
+            La usabilidad de acuerdo con el estándar ISO 9241-11 es “la medida en que un producto puede ser utilizado por usuarios especificados para lograr objetivos específicos con eficacia, eficiencia y satisfacción dentro de un contexto específico de uso”. 
+            Para establecer el buen manejo de la usabilidad, es necesario conocer los atributos que la componen, y así mismo, identificar los objetivos y descomposición de los 4 componentes de eficiencia, eficacia y satisfacción que de acuerdo con la norma son los siguientes:
+
+        \end{itemize}
+        \begin{itemize}
+            \begin{enumerate}
+                \item Eficiencia: Se define como los recursos gastados que el usuario utiliza durante todo el proceso de la realización de tareas con los cuales logra unos objetivos planteados. 
+                \break
+                \item Eficacia: Hace referencia a la exactitud e integridad con los usuarios que alcanzan los objetivos especificados. 
+                \break
+                \item Satisfacción: La ausencia de molestias y actitudes positivas hacia el uso del producto; evalúa la comodidad y aceptabilidad que tiene el sistema propuesto para el usuario en general. El objetivo de la creación e implementación de una plataforma web que organice cabalmente la gestión de los clubes deportivos es lograr que cada club desarrolle sus actividades sin ningún tipo de tropiezo y tenga un récord de las tareas ejecutadas y por ejecutar, en especial. 
+            \end{enumerate}
+        \end{itemize}
+        \begin{itemize}
+            Ahora bien, es necesario conocer la relación que existe entre la usabilidad y la parte gráfica del usuario, ya que es de importancia que la plataforma tenga una excelente interfaz gráfica, que sea entendible, que su manejo no sea complejo, que sea atractiva para las personas que interactúen con esta; sin embargo Según el artículo Principios Básicos de Usabilidad para Ingenieros Software, consideran la interfaz gráfica como aquella “basada en ventanas, como puede ser su color, su disposición o el diseño gráfico de los iconos y animaciones.” Retomando el párrafo anterior, es necesario conocer algunos factores que pueden identificar el gusto o percepción que genera un producto a un usuario, ya que finalmente es este el que define si es o no asequible un producto y si cumple todos los requisitos para su óptimo funcionamiento, si mediante una previa evaluación de medición de usabilidad el software o producto se considera listo para su uso. A continuación, se dará a conocer unos conceptos claves que permiten conocer un poco más como un usuario percibe un producto y como este se hace importante para él. 
+        \end{itemize}
+	\section{Experiencia de Usuario}
+	    \begin{itemize}
+	        La experiencia de usuario (en inglés User Experience o UX), es la suma de todos aquellos puntos de contacto, elementos y atributos que intervienen en la interacción entre un usuario y un dispositivo, entorno, producto, etc. El resultado de esa interacción es una percepción sobre dicha experiencia de uso, y genera una respuesta que puede ser positiva, indiferente o negativa.
+	    \end{itemize}
+	\section{¿Cómo evaluamos la Usabilidad/UX?}
+		\subsection{Inspección}
+		\begin{itemize}
+		    El término inspección aplicado a la usabilidad aglutina un conjunto de métodos para evaluar la usabilidad en los que hay unos expertos conocidos como evaluadores que explican el grado de usabilidad de un sistema basándose en la inspección o examen de la interfaz del mismo.
+            Existen varios métodos que se enmarcan en la clasificación de evaluación por inspección, siendo los siguientes los más importantes:
+
+		\end{itemize}
+		\begin{itemize}
+		    \begin{enumerate}
+		        \item [$*$] Evaluación Heurística.
+		        \item [$*$] Recorrido cognitivo.
+		        \item [$*$] Recorrido de Usabilidad Plural.
+		        \item [$*$] Recorrido cognitivo con los usuarios.
+		        \item [$*$] Inspección de estándares.
+		    \end{enumerate}
+		\end{itemize}
+		\subsection{Indagación}
+		\begin{itemize}
+		    El proceso de indagación trata de llegar al conocimiento de una cosa discurriendo o por conjeturas y señales. En este tipo de métodos de evaluación de la usabilidad una parte muy significativa del trabajo a realizar consiste en hablar con los usuarios y observarlos detenidamente usando el sistema en trabajo real y obteniendo respuestas a preguntas formuladas verbalmente o por escrito.
+            Los principales métodos de evaluación por indagación son:
+		\end{itemize}
+		\begin{itemize}
+		    \begin{enumerate}
+		        \item [$*$] Observación de Campo.
+		        \item [$*$] Grupo de Discusión Dirigido (Focus Group).
+		        \item [$*$] Entrevistas (Interviews).
+		        \item [$*$] Cuestionarios (Surveys).
+		        \item [$*$] Grabación del uso (logging).
+		    \end{enumerate}
+		\end{itemize}
+		\subsection{Test}
+		\begin{itemize}
+		    En los métodos de usabilidad por test usuarios representativos trabajan en tareas utilizando el sistema -o el prototipo- y los evaluadores utilizan los resultados para ver cómo la interfaz de usuario soporta a los usuarios con sus tareas.
+		    Los principales métodos de evaluación por test son:
+		\end{itemize}
+		\begin{itemize}
+		    \begin{enumerate}
+		        \item [$*$] Medida de las prestaciones.
+		        \item [$*$] Pensando en voz alta (thinking aloud).
+		        \item [$*$] Interacción constructiva.
+		        \item [$*$] Método del Conductor.
+		        \item [$*$] Ordenación de Tarjetas (Card Sorting).
+		    \end{enumerate}
+		\end{itemize}
+	\section{Nuevos Enfoques de Evaluación(Repensar la Evaluación)}
+	    \begin{itemize}
+	        Según Antoni Granollers la Evaluación de la Usabilidad debe verse desde otros puntos de vista. Como por ejemplo el tener en cuenta la funcionalidad distribuida entre muchos dispositivos con diferentes capacidades.
+	    \end{itemize}
+	    \subsection{Inter-Usability(Inter-Usabilidad)}
+	    \begin{itemize}
+	        El término inter-usabilidad es mencionado por Antoni Granollers en la última conferencia dada de la VI Jornada Iberoamericana de IHC. Y según él hace referencia a la usabilidad distribuida entre múltiples dispositivos. En otras palabras, la inter-usabilidad radica en las consideraciones adicionales que se tiene que tener presente a la hora de diseñar interacciones entre múltiples dispositivos.
+
+            El nivel de experiencia del usuario en cada dispositivo es una dimensión importante en la inter-usabilidad.
+	    \end{itemize}
+	\section{Evaluación de la Usabilidad / Experiencia de Usuario(UX) en el Futuro}
+	    \begin{itemize}
+	        Según Antoni Granollers el mundo está en constante cambio; y es por ello que se tiene que lograr adaptarse a tiempo, a estos cambios.
+	    \end{itemize}
+	    \subsection{Criterios para evaluar la usabilidad}
+	    \begin{itemize}
+	        Según Antoni Granollers el mundo está en constante cambio; y es por ello que se tiene que lograr adaptarse a tiempo, a estos cambios.
+	    \end{itemize}
+	        \subsubsection{Según la Tarea}
+	        \begin{itemize}
+	            Para la evaluación de la Usabilidad tomando como foco principal la tarea, se debe tener en cuenta las siguientes consideraciones:
+	        \end{itemize}
+	        \begin{itemize}
+		    \begin{enumerate}
+		        \item [$*$] ¿Cuando empieza y termina una tarea?
+		        \item [$*$] ¿Donde se realiza?.
+		        \item [$*$] Es de Carácter Multitarea Permanente.
+		        \item [$*$] Muchas tareas se producen de forma distribuida y Asincrónica.
+		    \end{enumerate}
+		    \end{itemize}
+	        \subsubsection{Según el Usuario}
+	        \begin{itemize}
+	            Para la evaluación de la Usabilidad tomando como foco principal el usuario, se debe tener en cuenta las siguientes consideraciones:
+	        \end{itemize}
+	        \begin{itemize}
+		    \begin{enumerate}
+		        \item [$*$] Si el contexto es multiusuario ¿Tiene sentido evaluar individualmente?
+		        \item [$*$] ¿Cómo evaluamos colectivamente?
+		        \item [$*$] ¿Quién es el usuario?.
+		    \end{enumerate}
+		    \end{itemize}
+	        \subsubsection{Según el Sistema}
+	        \begin{itemize}
+	          Para la evaluación de la Usabilidad tomando como foco principal el sistema, se debe tener en cuenta las siguiente consideración:
+	        \end{itemize}
+	        \begin{itemize}
+		    \begin{enumerate}
+		        \item [$*$] ¿Cuál es el límite del Sistema?
+		    \end{enumerate}
+		    \end{itemize}
+	    \subsection{Atributos que se debe tener en cuenta para la Usabilidad}
+	    \begin{itemize}
+	        Los atributos a tener en cuenta cuando se mide la usabilidad.
+	    \end{itemize}
+	        \subsubsection{Efectividad}
+	        \begin{itemize}
+	            Es la capacidad de un producto para conseguir de él los resultados esperados. Normalmente la evaluación de la efectividad es Si/No, es decir, se consigue el objetivo o no se consigue. Un producto que muestra efectividad es eficiente.
+	        \end{itemize}
+	        \subsubsection{Eficiencia}
+	        \begin{itemize}
+	            Es el esfuerzo requerido por la persona (en tiempo, en número de clics, en número de pantallas que ha tenido que ver hasta encontrar lo que busca...) para lograr cumplir su objetivo. Un producto que muestra eficiencia es efectivo.
+	        \end{itemize}
+	        \subsubsection{Satisfacción}
+	        \begin{itemize}
+	            Es la sensación que tiene el usuario mientras usa un producto o después de haberlo usado. No necesariamente es más satisfactorio un producto que ha sido efectivo y eficiente, a veces los usuarios no consiguen el objetivo que tenían, en cambio les gusta el producto. No sólo se valora la utilidad, en la satisfacción hay aspectos emocionales. Un producto que muestra satisfacción es satisfactorio.
+	        \end{itemize}
+	        \subsubsection{Contexto}
+	        \begin{itemize}
+	            Según Antoni Granollers es el entorno a donde va dirigido, el contexto es el mundo, cualquier espacio es el contexto, el contexto está en constante cambio.
+	        \end{itemize}
+	    \subsection{Pruebas de Usabilidad(Usability Testing)}
+	    \begin{itemize}
+	        Según Antoni Granollers es el entorno a donde va dirigido, el contexto es el mundo, cualquier espacio es el contexto, el contexto está en constante cambio.
+	    \end{itemize}
+	\section{  Según el autor referente a:}
+	    \begin{itemize}
+	        \item \textbf{Desafío de tecnología UX frente a personas discapacitadas: }Debe tener una experiencia de usuario íntegra, debe tener un modelo de diseño centrado en la usabilidad y en la accesibilidad.Recalcando la accesibilidad como parte indisoluble de los trabajos.
+	        \break
+	        \item \textbf{Nivel de aceptación del usuario: }El cambio de época influyó mucho en esto, ya que para esto el usuario ha cambiado, hay que poner a los nuevos usuarios en contexto con el sistema planteado, y ser capaces evaluar y de encontrar este balance para los nuevos, antiguos y medios.
+	        \break
+	        \item \textbf{¿Cómo se podría reemplazar la experiencia real del producto hacia el cliente?: }Aunque se pensaría aplicar realidad virtual en muchos aspectos, caeríamos en un error al querer digitalizar todo, si lo queremos digitalizar todo estaríamos suprimiendo varios factores humanos como las emociones,  actualmente tendríamos que evaluar dicha situación para llegar a tener un punto medio.
+	        \break
+	    \end{itemize}
+	\section{Conclusiones}
+	    \begin{itemize}
+	    \begin{enumerate}
+		        \item [$-$] El concepto ha cambiado por completo  la industria 4.0 y el iot supone un nuevo paradigma por completamente distinto.
+		        \item [$-$] Las bases son las conocidas (HCI) son sólidas, pero no podemos hacer lo mismo por siempre tenemos que replantear desde un nuevo contexto, replantear los conceptos de usabilidad y/o UX en un mundo multitarea.
+		        \item [$-$] Los “nuevos” diseñadores de UX tienen un mundo apasionante por descubrir y muchos retos por delante,El mercado a su vez se está llenando de pseudo profesionales lo que no ayuda.
+		       
+		\end{enumerate}
+		\end{itemize}
+
+
+
+
+		\end{flushleft}
+	\end{normalsize}
+\end{document}
