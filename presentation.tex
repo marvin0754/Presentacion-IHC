@@ -1,0 +1,468 @@
+%% This Beamer template is based on the one found here: https://github.com/sanhacheong/stanford-beamer-presentation, and edited to be used for Stanford ARM Lab
+
+\documentclass[10pt]{beamer}
+%\mode<presentation>{}
+
+\usepackage{media9}
+\usepackage{amssymb,amsmath,amsthm,enumerate}
+\usepackage[utf8]{inputenc}
+\usepackage{array}
+\usepackage[parfill]{parskip}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{bm}
+\usepackage{amsfonts,amscd}
+\usepackage[]{units}
+\usepackage{listings}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{tcolorbox}
+\usepackage{physics}
+
+% Enable colored hyperlinks
+\hypersetup{colorlinks=true}
+
+% The following three lines are for crossmarks & checkmarks
+\usepackage{pifont}% http://ctan.org/pkg/pifont
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
+
+% Numbered captions of tables, pictures, etc.
+\setbeamertemplate{caption}[numbered]
+
+%\usepackage[superscript,biblabel]{cite}
+\usepackage{algorithm2e}
+\renewcommand{\thealgocf}{}
+
+% Bibliography settings
+\usepackage[style=ieee]{biblatex}
+\setbeamertemplate{bibliography item}{\insertbiblabel}
+\addbibresource{references.bib}
+
+% Glossary entries
+\usepackage[acronym]{glossaries}
+\newacronym{ML}{ML}{machine learning}
+\newacronym{HRI}{HRI}{human-robot interactions}
+\newacronym{RNN}{RNN}{Recurrent Neural Network}
+\newacronym{LSTM}{LSTM}{Long Short-Term Memory}
+
+
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+\theoremstyle{definition}
+
+\newcommand{\empy}[1]{{\color{darkorange}\emph{#1}}}
+\newcommand{\empr}[1]{{\color{cardinalred}\emph{#1}}}
+\newcommand{\examplebox}[2]{
+\begin{tcolorbox}[colframe=darkcardinal,colback=boxgray,title=#1]
+#2
+\end{tcolorbox}}
+
+\usetheme{Stanford} 
+\input{./style_files_stanford/my_beamer_defs.sty}
+\logo{\includegraphics[height=0.4in]{./style_files_stanford/SU_New_BlockStree_2color.png}}
+
+% commands to relax beamer and subfig conflicts
+% see here: https://tex.stackexchange.com/questions/426088/texlive-pretest-2018-beamer-and-subfig-collide
+\makeatletter
+\let\@@magyar@captionfix\relax
+\makeatother
+
+\title[Evaluacion de la Usabilidad ]{EVALUAR LA USABILIDAD / UX EN EL FUTURO}
+%\subtitle{Subtitle Of Presentation}
+
+%\beamertemplatenavigationsymbolsempty
+
+\begin{document}
+
+\author[Interaccion Humano Computador]{
+	\begin{tabular}{c} 
+	\Large
+        Integrantes:  \\
+            Frank Leny Ccapa Usca\\
+			Patrik Renee Quenta Nina\\
+			Alfred Marvin Casanova Vargaya\\
+			Yonathan Smith Ylacaña Cordova
+\\
+    \footnotesize 
+\end{tabular}
+\vspace{-4ex}}
+
+\institute{
+	\vskip 5pt
+	\begin{figure}
+		\centering
+		\begin{subfigure}[t]{0.5\textwidth}
+			\centering
+			\includegraphics[height=0.33in]{./style_files_stanford/stanford_logo_2.png}
+		\end{subfigure}%
+		
+	\end{figure}
+	\vskip 5pt
+	INTERACCION HUMANO COMPUTADOR\\
+	ESCUELA PROFESIONAL DE INGENIERÍA DE SISTEMAS\\
+    FACULTAD DE INGENIERÍA DE PRODUCCIÓN Y SERVICIOS\\
+	\vskip 3pt
+}
+
+% \date{June 15, 2020}
+\date{\today}
+
+\begin{noheadline}
+\begin{frame}\maketitle\end{frame}
+\end{noheadline}
+
+\setbeamertemplate{itemize items}[default]
+\setbeamertemplate{itemize subitem}[circle]
+
+\begin{frame}
+	\frametitle{} % Table of contents slide, comment this block out to remove it
+	\tableofcontents{} % Throughout your presentation, if you choose to use \section{} and \subsection{} commands, these will automatically be printed on this slide as an overview of your presentation
+	\begin{center}
+	    \frametitle{Usabilidad}
+	    \paragraph{
+	    La Usabilidad es la medida de la calidad de la experiencia que tiene un usuario cuando interactúa con un producto o sistema. 
+	    }
+	\end{center}
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+    
+    \frametitle{Evaluación de Usabilidad}
+    \paragraph{
+    La evaluación es una parte básica de un diseño de un sistema centrado en el usuario. \\
+
+    Permite conocer el grado de cumplimiento de las expectativas de los usuarios de un determinado sistema interactivo, asi como si este se adapta a su contexto social, fisico y organizativo.
+    }
+   
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+    \frametitle{Modelos Historicos Evaluacion-Modelo de Eason}
+    \paragraph{
+    \textbf{\Large Tareas}\hfill \break
+       
+        \textbf{Frecuencia:} Número de veces que un usuario realiza una tarea\\
+       \textbf{Apertura:}    Grado en el que una tarea es modificable.\\
+       \hfill \break
+    \textbf{\Large Usuario}\hfill \break
+        
+        \textbf{Conocimiento:} El conocimiento que el usuario aplica a la tarea, puede ser apropiado o inapropiado.\\
+        \textbf{Motivación:} Qué tan decidido está el usuario a completar la tarea.\\
+        \textbf{Discreción:} La capacidad de los usuarios de elegir no utilizar alguna parte de un sistema.\\
+    }
+  
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+    \frametitle{Modelos Historicos Evaluacion-Modelo de Eason}
+    \paragraph{
+    \textbf{\Large Sistema}\hfill \break
+       
+        \textbf{La facilidad de aprendizaje:} El esfuerzo requerido para comprender y   operar un sistema desconocido.\\
+        \textbf{Facilidad de uso:} El esfuerzo que se requiere para operar un sistema una vez que ha sido comprendido y dominado por el usuario.\\
+        \textbf{Coincidencia de tarea:} La medida en que la información y las funciones que proporciona un sistema coinciden con las necesidades del usuario.
+    }
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+    \frametitle{Modelos Mas Modernos Evaluacion-Modelo de Shackel (1991)}
+    \paragraph{
+    \textbf{\LARGE ATRIBUTOS}\hfill \break
+    
+    \textbf{\Large Eficacia}\hfill \break
+    
+        Se describe como el rendimiento de los sistemas es mejor que algún nivel requerido, en un porcentaje requerido del rango objetivo especificado de usuarios dentro de una parte requerida del rango de entornos de uso.
+    
+    \textbf{\Large Capacidad de aprendizaje}\hfill \break
+    
+        Es la formación de los usuarios despues de un tiempo especifico desde la instalacion del sistema. Ademas, incluye el tiempo de reaprendizaje de los usuarios para los sistemas de capacitacion y soporte.
+
+    }
+\end{frame}
+\begin{frame}[allowframebreaks]
+    \frametitle{Modelos Mas Modernos Evaluacion-Modelo de Shackel (1991)}
+    \paragraph{
+    
+    \textbf{\Large Flexibilidad}\hfill \break
+    
+       Son los cambios positivos o variaciones en el sistema a los existentes.
+    \hfill \break
+    
+    \textbf{\Large Actitud}\hfill \break
+    
+       Es la aceptación de los usuarios dentro de sus niveles de malestar, cansancio, frustración y esfuerzo personal.
+
+    }
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+    \frametitle{Modelo de Nielsen(1993) Part 1}
+    \paragraph{
+    
+    \textbf{\Large Capacidad de aprendizaje: }Son los cambios positivos o variaciones en el sistema a los existentes.
+    \hfill \break
+    
+    \textbf{\Large Eficiencia: }Es la aceptación de los usuarios dentro de sus niveles de malestar, cansancio, frustración y esfuerzo personal.
+    \hfill \break
+    
+    \textbf{\Large Memorabilidad: }Es más adecuado para usuarios intermitentes. El usuario puede volver al estado anterior del sistema sin comenzar desde el principio.
+    
+    }
+\end{frame}
+\begin{frame}[allowframebreaks]
+    \frametitle{Modelo de Nielsen(1993) Part 2}
+    \paragraph{
+    
+    \textbf{\Large Errores: }La tasa de error en cualquier sistema deberia ser menor, si se produce algun error. El sistema deberia poder recuperarse.
+
+    \hfill \break
+    
+    \textbf{\Large Satisfaccion: }Es la sensacion placentera que obtiene el usuario durante o despues de utilizar el sistema. Se puede observar como simpatia por el sistema y cumplimiento de la solicitud especificada.
+
+    }
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+    \frametitle{ISO 9241-11(1998)}
+    \paragraph{
+    
+    \textbf{\Large Efectividad: }Es la medida de desempeño de un sistema para completar una tarea u objetivo especifico con exito en el tiempo.
+
+    \hfill \break
+    
+    \textbf{\Large Eficiencia: }Es la finalización exitosa de una tarea por parte de un sistema. Se relaciona con la precisión y la integridad del objetivo especificado.
+
+    }
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+    \frametitle{ISO/IEC 25010:2011 Calidad de Uso}
+    \paragraph{
+    
+    \textbf{\Large Satisfaccion: }Es la aceptabilidad de un sistema por parte del usuario, en un contexto de uso especifico.
+
+
+    }
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+    \frametitle{ISO 9126(2001)}
+    \paragraph{
+    
+    \textbf{\Large Comprensibilidad: }La capacidad del producto de software para permitirle al usuario comprender si el software es adecuado y como se puede utilizar para tareas y condiciones de uso particulares.
+    \hfill \break
+    
+    \textbf{\Large Capacidad de aprendizaje: }la capacidad del producto de software para permitir al usuario aprender su aplicacion.
+    \hfill \break
+    
+    \textbf{\Large Operatividad: }La capacidad del producto de software para permitir al usuario operarlo y controlarlo.
+    \hfill \break
+    
+    \textbf{\Large Atractivo: }La capacidad del producto de software para ser atractivo para el usuario.
+    \hfill \break
+    
+    \textbf{\Large Cumplimiento de usabilidad: }La capacidad del producto de software para adherirse a estándares, convenciones, guias de estilo o regulaciones relacionadas con la usabilidad.
+    
+    }
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+    \frametitle{EXPERIENCIA DE USUARIO/UX}
+    \paragraph{\centering
+    La experiencia de usuario (en ingles User Experience o UX), es la suma de todos aquellos puntos de contacto, elementos y atributos que intervienen en la interacción entre un usuario y un dispositivo, entorno, producto, etc. El resultado de esa interacción es una percepción sobre dicha experiencia de uso, y genera una respuesta que puede ser positiva, indiferente o negativa.
+    Percepciones y respuestas de los usuarios que resultan del uso y/o uso anticipado de un sistema, producto o servicio.
+    }
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+    \frametitle{EXPERIENCIA DE USUARIO/UX}
+    \paragraph{
+    El diseño de la experiencia del usuario como disciplina se ocupa de todos los elementos que juntos componen esa interfaz, incluyendo\\
+    \hfill \break
+    *diseño\\
+    *diseño visual\\
+    *texto\\
+    *sonido de marca, y\\
+    *Interacción\\
+    \hfill \break
+    UX trabaja para coordinar estos elementos para permitir la mejor interaccion posible por parte de los usuarios.
+    }
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+    \frametitle{¿CÓMO SE MIDE O CÓMO SE EVALÚA LA USABILIDAD?}
+    \paragraph{
+    \textbf{Metodos de evaluacio Clasificacion}\\
+    Según la forma de realizacion y el tipo de participantes, la evaluacion de la usabilidad se clasifica de la siguiente forma:\\
+    \hfill \break
+    *{{Metodos por Inspeccion}}\\
+    *{{Metodos por Indagacion}}\\
+    *{{Metodos por Test E}}
+  
+    }
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+    \frametitle{Metodos de evaluacion Inspecion}
+    \paragraph{
+    \textbf{Inspeccion}\\
+        El termino inspeccion aplicado a la usabilidad aglutina un conjunto de métodos para evaluar la usabilidad en los que hay unos expertos conocidos como evaluadores que analizan y explican el grado de usabilidad de un sistema basándose en la inspeccion o examen de la interfaz del mismo.\\
+        
+        Salvo excepciones, no intervienen usuarios de forma directa.\\
+        Existen varios metodos que se enmarcan en la clasificacion de evaluacion por inspeccion.\\
+        
+        Los mas importantes son:\\
+        \hfill \break
+        *{{Heuristica}}\\
+        *{{Recorridos cognitivos}}\\
+        *{{Recorrido de usabilidad plural}}\\
+        *{{Revision de Estandares}}
+            
+    }
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+    \frametitle{Metodos de evaluacion Indagacion}
+    \paragraph{
+    \textbf{Indagacion}\\
+    La informacion acerca de los gustos del usuario, desagrados, necesidades y la identificacion de requisitos son informaciones indispensables en una etapa temprana del proceso de desarrollo.\\
+    Por tanto, inicialmente, hay que descubrir y aprender, hay que generar ideas de diseño, y va a resultar de especial interes que las metodologias a aplicar en las primeras fase del desarrollo, pues proporcionan informacion acerca de la usabilidad de un producto que aun no se ha empezado a fabricar. 
+
+    }
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+    \frametitle{Metodos de evaluacion Indagacion}\\
+    \paragraph{
+    Estos métodos tratan de descubrir y aprender de los usuarios, sus opiniones, desagrados, gustos, necesidades.\\
+    \hfill \break
+    \textbf{Tipos}\\ 
+    \hfill \break
+        *{{Observación de campo}}\\
+        *{{Focus Groups • Entrevistas}}\\
+        *{{Cuestionarios}}\\
+        *{{Grabación del uso (Logging) }}
+
+    }
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+    \frametitle{Metodos de evaluacion Test}\\
+    \paragraph{
+    \textbf{Test}\\
+    Usuarios representativos trabajan en tareas utilizando el sistema (o el prototipo) 
+    Evaluadores analizan los resultados para ver como la interfaz de usuario da soporte a los usuarios con sus tareas.\\
+    \hfill \break
+    \textbf{Tipos}\\ 
+    \hfill \break
+        *{{Thinking Aloud (Pensando en voz alta)}}\\
+        *{{Interacción constructiva}}\\
+        *{{Método del conductor}}\\
+        *{{Test remoto}}
+
+    }
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+    \frametitle{Nuevos Enfoques de Evaluación}\\
+    \paragraph{
+    \textbf{Repensar la Evaluación}\\
+    Según Antoni Granollers la Evaluación de la Usabilidad debe verse desde otros puntos de vista. Como por ejemplo el tener en cuenta la funcionalidad distribuida entre muchos dispositivos con diferentes capacidades.\\
+    \hfill \break
+    \textbf{Inter-Usability(Inter-Usabilidad)}\\ 
+    El nivel de experiencia del usuario en cada dispositivo es una dimension importante en la inter-usabilidad.
+
+    }
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+    \frametitle{Evaluacion de la Usabilidad / Experiencia de Usuario(UX) en el Futuro}\\
+    \paragraph{
+    Según Antoni Granollers el mundo esta en constante cambio; y es por ello que se tiene que lograrse adaptarse a tiempo, a estos cambios.
+    }
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+    \frametitle{Criterios para evaluar la usabilidad}\\
+    \paragraph{
+    Para evaluar la Usabilidad, se ha tomado en cuenta variables como: la tarea a realizar, el usuario a quien va dirigido y el sistema que se esta diseñando.\\
+    \hfill \break
+    \textbf{Segun la Tarea}\\ 
+    \hfill \break
+        *{{¿Cuando empieza y termina una tarea?}}\\
+        *{{¿Donde se realiza?}}\\
+        *{{Es de Caracter Multitarea Permanente}}\\
+        *{{Muchas tareas se producen de forma distribuida y Asincronica}}
+    
+    }
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+    \frametitle{Criterios para evaluar la usabilidad}\\
+    \paragraph{
+    \textbf{Segun el Usuario}\\ 
+    \hfill \break
+        *{{Si el contexto es multiusuario ¿Tiene sentido evaluar individualmente?}}\\
+        *{{¿Como evaluamos colectivamente?}}\\
+        *{{¿Quien es el usuario?}}\\
+    \hfill \break
+    \textbf{Segun el Sistema}\\ 
+    \hfill \break
+        *{{¿Cual es el limite del Sistema?}}\\
+    }
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+    \frametitle{Atributos que se debe tener en cuenta para la Usabilidad}
+    \paragraph{
+    
+    \textbf{\Large Efectividad: }Es la capacidad de un producto para conseguir los resultados esperados. Normalmente la evaluacion de la efectividad es Si/No, es decir, se consigue el objetivo o no se consigue. Un producto que muestra efectividad es eficiente.
+    \hfill \break
+    
+    \textbf{\Large Eficiencia: }Es el esfuerzo requerido por la persona (en tiempo, en numero de clics, en numero de pantallas que ha tenido que ver hasta encontrar lo que busca...) para lograr cumplir su objetivo. Un producto que muestra eficiencia es efectivo.
+    \hfill \break
+    
+    \textbf{\Large Satisfaccion: }Es la sensación que tiene el usuario mientras usa un producto o despues de haberlo usado. No necesariamente es más satisfactorio un producto que ha sido efectivo y eficiente, a veces los usuarios no consiguen el objetivo que tenian, en cambio les gusta el producto. No sólo se valora la utilidad, en la satisfaccion hay aspectos emocionales. Un producto que muestra satisfaccion es satisfactorio.
+    \hfill \break
+    }
+\end{frame}
+\begin{frame}[allowframebreaks]
+    \frametitle{Atributos que se debe tener en cuenta para la Usabilidad}
+    \paragraph{
+    \textbf{\Large Contexto: }Segun Antoni Granollers es el entorno a donde va dirigido, el contexto es el mundo, cualquier espacio es el contexto, el contexto esta en constante cambio.
+    
+    }
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+    \frametitle{Pruebas de Usabilidad(Usability Testing)}
+    \paragraph{
+    Las pruebas de usabilidad son una forma de ver que tan facil es usar algo probándolo con usuarios reales.A los usuarios se les pide que completen tareas, generalmente mientras son observados por un investigador, para ver dónde encuentran problemas y experimentan confusión. Si más personas encuentran problemas similares, se harán recomendaciones para superar estos problemas de usabilidad.\\
+    \hfill \break
+    Las pruebas de usabilidad son un método que se utiliza para evaluar la facilidad de uso de un sitio web. Las pruebas se realizan con usuarios reales para medir qué tan "utilizable" o "intuitivo" es un sitio web y qué tan fácil es para los usuarios alcanzar sus objetivos. Las pruebas de usabilidad actualmente y a futuro van por el camino del “testeo remoto”.
+
+    }
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+    \frametitle{Conclusiones}
+    \paragraph{
+    -El concepto ha cambiado por completo  la industria 4.0 y el iot supone un nuevo paradigma por completamente distinto
+    -Las bases son las conocidas (HCI) son sólidas, pero no podemos hacer lo mismo por siempre tenemos que replantear desde un nuevo contexto, replantear los conceptos de usabilidad y/o UX en un mundo multitarea.
+    -Los “nuevos” diseñadores de UX tienen un mundo apasionante por descubrir y muchos retos por delante,El mercado a su vez se está llenando de pseudo profesionales lo que no ayuda.
+
+
+    }
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+    \frametitle{}
+    \large{
+        GRACIAS.
+    }
+  
+\end{frame}
+
+\end{document}
